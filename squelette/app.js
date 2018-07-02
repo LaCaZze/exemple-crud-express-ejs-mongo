@@ -9,11 +9,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//bout de code ajouté 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/[nom_de_votre_base]')
   .then(() =>  console.log('connection succesful'))
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
